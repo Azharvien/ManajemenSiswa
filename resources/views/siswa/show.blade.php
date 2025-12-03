@@ -31,9 +31,17 @@
 
         <dd class="text-gray-700 sm:col-span-2">{{ $siswa->mentor->nama }}</dd>
       </div>
-        </dd>
-      </div>
     </dl>
+  </div>
+
+  <div class="mt-8  pt-6">
+    <form action="{{ route('siswa.destroy', $siswa->id) }}" method="post">
+      @csrf
+      @method('DELETE')
+      <button type="submit" class="px-6 py-3 bg-teal-600 text-white font-bold rounded hover:bg-teal-700">
+        Hapus Siswa
+      </button>
+    </form>
   </div>
     <x-slot:footer>
         <strong>Siswa Detail Page</strong>

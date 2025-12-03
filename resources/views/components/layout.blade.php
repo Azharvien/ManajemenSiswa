@@ -7,6 +7,14 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+    @if (session('success'))
+        <div id="flash" class="bg-green-100 border border-green-400 text-center font-bold text-green-700 px-4 py-3 rounded relative" role="alert">
+           <p>
+            {{ session('success') }}
+            </p>
+        </div>
+      
+    @endif
     <header class="bg-white">
   <div class="mx-auto flex h-16 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
     <a class="block text-teal-600" href="/">

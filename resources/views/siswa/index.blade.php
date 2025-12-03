@@ -19,7 +19,7 @@
                 <td class="px-3 py-2 whitespace-nowrap">{{ $item->jurusan }}</td>
                 <td class="px-3 py-2 whitespace-nowrap">{{ $item->nilai }}</td>
                 <td class="px-3 py-2 whitespace-nowrap">
-                    <a href="{{ route('siswa.show', ['id' => $item->id]) }}" class="text-teal-500 hover:opacity-50">
+                    <a href="{{ route('siswa.show', ['siswa' => $item->id]) }}" class="text-teal-500 hover:opacity-50">
                         Lihat Detail
                     </a>
                 </td>
@@ -28,8 +28,10 @@
     </tbody>
     </table>
 </div>
-    <div class=py-8 >
-    {{ $data->appends(request()->query())->links() }}
+    <div class="py-8">
+    <div class="flex flex-wrap justify-center gap-2">
+        {{ $data->appends(request()->query())->links('pagination::bootstrap-4') }}
+    </div>
     </div>
     <x-slot:footer>
         <strong>Siswa Page</strong>
