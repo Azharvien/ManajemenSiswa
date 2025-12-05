@@ -43,13 +43,12 @@
 
       <div class="flex items-center gap-4">
         <div class="sm:flex sm:gap-4">
-          <a class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700" href="#">
-            Login
-          </a>
-
-          <a class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block" href="#">
-            Register
-          </a>
+          <form action="{{ route('logout') }}" method="POST" class="inline">
+            @csrf
+            <button type="submit" class="hidden rounded-md bg-red-400 px-5 py-2.5 text-sm font-medium text-white transition hover:text-red-700/75 sm:block">
+              Logout
+            </button>
+          </form>
         </div>
 
         <button class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">

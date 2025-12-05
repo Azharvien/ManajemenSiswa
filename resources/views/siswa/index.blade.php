@@ -3,7 +3,7 @@
    <div class="overflow-x-auto">
     <table class="min-w-full divide-y-2 divide-gray-200">
         <thead class="ltr:text-left rtl:text-right">
-            <tr tr class="*:font-medium *:text-gray-900">
+            <tr class="*:font-medium *:text-gray-900">
             <th class="px-3 py-2 whitespace-nowrap">Nama</th>
             <th class="px-3 py-2 whitespace-nowrap">Tanggal Lahir</th>
             <th class="px-3 py-2 whitespace-nowrap">Jurusan</th>
@@ -30,7 +30,7 @@
 </div>
     <div class="py-8">
     <div class="flex flex-wrap justify-center gap-2">
-        {{ $data->appends(request()->query())->links('pagination::bootstrap-4') }}
+        {{ $data->appends(request()->query())->links() }}
     </div>
     </div>
     <x-slot:footer>
